@@ -1,1 +1,11 @@
-<p>{{name}}</p>
+<div>
+  <p>{{name}}</p>
+  <button>add Task</button>
+  <ul>
+    @for (task of selcetUserTasks; track task.id) {
+      <li>
+        <app-task [task]="task"/>
+      </li>
+    }
+  </ul>
+</div>
