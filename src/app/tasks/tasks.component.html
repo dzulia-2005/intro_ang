@@ -1,10 +1,14 @@
 <div>
+  @if(isAddingTask){
+    <app-create-task (cancel)="onCancelAddTask()" (add)="onAddTask($event)" />
+  }
   <p>{{name}}</p>
-  <button>add Task</button>
+  <button (click)="onStartAddTask()">add Task</button>
   <ul>
+
     @for (task of selcetUserTasks; track task.id) {
       <li>
-        <app-task [task]="task"/>
+        <app-task [task]="task" (complete)="onCompleteTask($event)"/>
       </li>
     }
   </ul>

@@ -1,5 +1,5 @@
 <main>
-  <button (click)="onSelectUser()">
+  <button [class.active]="selected" (click)="onSelectUser()">
     <img style="height: 400px;height: 400px;" [src]="imagePath" alt="User">
     <p>{{user.name}}</p>
   </button>
