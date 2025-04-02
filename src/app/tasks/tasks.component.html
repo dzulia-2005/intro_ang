@@ -1,6 +1,6 @@
 <div>
   @if(isAddingTask){
-    <app-create-task (cancel)="onCancelAddTask()" (add)="onAddTask($event)" />
+    <app-create-task [userId]="userId" (cancel)="onCancelAddTask()" (add)="onAddTask($event)" />
   }
   <p>{{name}}</p>
   <button (click)="onStartAddTask()">add Task</button>
